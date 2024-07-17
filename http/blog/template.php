@@ -135,12 +135,21 @@ echo "<meta property=\"og:description\" content=\"{$description}\">\n";
     </div>
     <footer>
         <div id="social-links">
-            <a href="https://linkedin.com/in/pascscha" class="social-link" title="LinkedIn"><i
-                    class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/pascscha" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://stackoverflow.com/users/10046273/pascscha" class="social-link" title="Stack Overflow"><i
-                    class="fab fa-stack-overflow"></i></a>
-            <a href="mailto:mail@pascscha.ch" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:mail@pascscha.ch" class="social-link" title="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/pascscha" class="social-link" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/pascscha" class="social-link" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://mastodon.social/@pascscha" class="social-link" title="Mastodon">
+                <i class="fab fa-mastodon"></i>
+            </a>
+            <a href="https://twitter.com/pascscha" class="social-link" title="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
         </div>
         <div id="footer-links">
             <a href="/privacy" class="footer-link">Privacy Policy</a>
