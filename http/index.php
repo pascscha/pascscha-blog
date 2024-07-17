@@ -35,8 +35,8 @@
     <meta name="twitter:card" content="summary_large_image">
 
     <script src="/js/banner/MilitaryGradeEncryptor.js" nonce="<?php echo $script_nonce; ?>"></script>
-    <script src="/js/banner/paddingOracleDemo.js" nonce="<?php echo $script_nonce; ?>">></script>
-    <script src="/js/banner/animationHelpers.js" nonce="<?php echo $script_nonce; ?>">></script>
+    <script src="/js/banner/paddingOracleDemo.js" nonce="<?php echo $script_nonce; ?>"></script>
+    <script src="/js/banner/animationHelpers.js" nonce="<?php echo $script_nonce; ?>"></script>
 
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -147,28 +147,28 @@
 
 <script nonce="<?php echo $script_nonce; ?>">
 
-        window.addEventListener('DOMContentLoaded', (event) => {
-            // Add click event to the info circle
-            document.getElementById('info-circle').addEventListener('click', function () {
-                window.location.href = 'blog/3-breaking-military-grade-encryption-to-animate-my-name/';
-            });
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // Add click event to the info circle
+        document.getElementById('info-circle').addEventListener('click', function () {
+            window.location.href = 'blog/3-breaking-military-grade-encryption-to-animate-my-name/';
+        });
 
-            // Animate Padding oracle
-            getDiagramElements('banner-diagram').then(
-                (diagramElements) => {
-                    // Banner Title
-                    diagramElements["T"] = document.getElementById("banner-title")
+        // Animate Padding oracle
+        getDiagramElements('banner-diagram').then(
+            (diagramElements) => {
+                // Banner Title
+                diagramElements["T"] = document.getElementById("banner-title")
 
-                    // Can be any string with < 15 utf-8 encoded bytes
-                    let encryptor = new MilitaryGradeEncryptor("Pascal Schärli");
+                // Can be any string with < 15 utf-8 encoded bytes
+                let encryptor = new MilitaryGradeEncryptor("Pascal Schärli");
 
-                    encryptor.getEncryptedSecret().then((ciphertext) => {
-                        decryptBlockWithPaddingOracle(ciphertext, encryptor, diagramElements, 100);
-                    });
+                encryptor.getEncryptedSecret().then((ciphertext) => {
+                    decryptBlockWithPaddingOracle(ciphertext, encryptor, diagramElements, 100);
+                });
 
-                }
-            )
-        })
+            }
+        )
+    })
 </script>
 
 

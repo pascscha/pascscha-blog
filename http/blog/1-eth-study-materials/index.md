@@ -3,14 +3,17 @@
 Welcome to my collection of ETH Zürich study materials. As a former tutor at ETH, I've created resources for two Computer Science courses in the Electrical Engineering and Mechanical Engineering bachelor programs. I have since finished my studies and left ETH Zürich, but I'm archiving these documents here.
 
 ## Informatik 1
+
 Informatik 1 is a foundational course in C++ programming for first-year bachelor students in Electrical Engineering and Mechanical Engineering at ETH Zürich. This course introduces students to the basics of programming, algorithms, and problem-solving using C++.
 
 ### Study Videos for Informatik 1
+
 These study videos, recorded by EE4ETH, condense the 10 most important topics of the lecture into several short Youtube videos.
 
 [Full Playlist](https://www.youtube.com/playlist?list=PL0WLWTsoAENg6yiw2hdDDzu-6xpZhU-yh)
 
 ### Weekly Exercise Sessions for Informatik 1
+
 Exercise Slides I've created for Spring Semester 2019. These slides were used in weekly exercise sessions to reinforce C++ concepts and provide hands-on coding practice.
 
 - Exercise 1 (<a href="/info1/Exercises/Ex1" target="_blank">Web</a> / <a href="/info1/Exercises/Ex1/Ex1.pdf" target="_blank">Pdf</a>) - Main Funktion, Integer Division, Expressions

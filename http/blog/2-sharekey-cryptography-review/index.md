@@ -12,7 +12,6 @@ This is my story about my cryptographic review of Sharekey, a privacy-focused co
 
 This project was done in close collaboration with Sharekey. They gave me access to all of their backend code and we had regular meetings to discuss my findings or troubleshoot any issues.
 
-
 ## Key Findings
 
 I had quite a view findings in my thesis, all of which can be read in [section 3.2 of my thesis](https://ethz.ch/content/dam/ethz/special-interest/infk/inst-infsec/appliedcrypto/education/theses/masters-thesis_pascal-schaerli.pdf#section.3.2). All of these findings were responsibly disclosed to Sharekey. Here I'm going to focus on the two most interesting attacks I found.
@@ -37,7 +36,7 @@ My next set of findings centered around file sharing. The issues there originate
 
 ![Sharekey backend for file uploading](img/sharekey-backend-for-file-uploading.webp)
 
-The engineering issue they faced there is that they were unable to persist the authenticated session across to the other server. So as an alternative means of authentication, They required each encrypted file chunk to have a signature by the file owner. However, this signature did not cover any intent, such as _"This is chunk &lt;chunk-id&gt; and I want to upload it as part of file &lt;file-id&gt;"_. Instead it was just a signature over the raw encrypted file contents, a big blob of random looking bytes. 
+The engineering issue they faced there is that they were unable to persist the authenticated session across to the other server. So as an alternative means of authentication, They required each encrypted file chunk to have a signature by the file owner. However, this signature did not cover any intent, such as _"This is chunk &lt;chunk-id&gt; and I want to upload it as part of file &lt;file-id&gt;"_. Instead it was just a signature over the raw encrypted file contents, a big blob of random looking bytes.
 
 Pairing this with the ability of overwriting existing file chunks was a recipe of desaster. When you send a file to an adversary, they could now download all of your file chunks, and for example re-upload them in a different order, without any cryptographic way of detecting such tampering.
 
