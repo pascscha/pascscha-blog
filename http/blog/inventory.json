@@ -1,0 +1,20 @@
+[
+    {
+        "timestamp": 1606863632,
+        "title": "ETH Study Materials",
+        "description": "A collection of study material I created back when I was tutoring Computer Science at ETH Zürich",
+        "link": "/blog/1-eth-study-materials/"
+    },
+    {
+        "timestamp": 1688421664,
+        "title": "Finding 19 Vulnerabilities in one Messenger",
+        "description": "When I started this project, I thought there would be little to find. However, it didn't take long for my initial assumptions to be proven wrong.",
+        "link": "/blog/2-sharekey-cryptography-review/"
+    },
+    {
+        "timestamp": 1721222075,
+        "title": "Breaking Military Grade Encryption to Animate my Name",
+        "description": "Getting into the weeds of my flashy website banner, that simulates a padding-oracle attack on AES-CBC.",
+        "link": "/blog/3-breaking-military-grade-encryption/"
+    }
+]
