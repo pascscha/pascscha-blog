@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pascal Schärli</title>
+    <title>Pascal Schärli - Cryptography Engineer</title>
     <meta name="description"
         content="Pascal Schärli's latest research and projects on cryptography and cyber security.">
     <meta name="keywords" content="Pascal Schärli, cyber security, cryptography, encryption, research, ETH Zürich">
@@ -50,7 +50,9 @@
         <!-- This is a demo for a padding oracle attack on AES in CBC mode. Have a look at js/banner/MilitaryGradeEncryptor.js to which I've intentionally added a padding oracle, which is then used by js/banner/paddingOracleDemo.js to retrieve the plaintext letter-by-letter, which, in this case, is "Pascal Schärli" -->
         <h1 id="banner-title">&nbsp;</h1>
         <div id="banner-diagram"></div>
-
+        <div id="replay-circle">
+            <i class="fas fa-redo-alt"></i>
+        </div>
         <div id="info-circle">
             ?
             <div id="info-tooltip">This is a demo for a padding oracle attack on AES in CBC mode. Click here for more
@@ -70,7 +72,7 @@
         <div id="blog-posts">
             <h2>
                 My Projects
-                <a href="/blog/rss" class="rss-link" title="RSS Feed">
+                <a href="/weblog/rss" class="rss-link" title="RSS Feed">
                     <i class="fas fa-rss"></i>
                 </a>
             </h2>
@@ -78,7 +80,7 @@
             <div class="post-list">
                 <?php
                 // Read the JSON file
-                $jsonFile = 'blog/inventory.json';
+                $jsonFile = 'weblog/inventory.json';
                 $jsonData = file_get_contents($jsonFile);
 
                 // Decode JSON data into a PHP array
@@ -150,7 +152,7 @@
     window.addEventListener('DOMContentLoaded', (event) => {
         // Add click event to the info circle
         document.getElementById('info-circle').addEventListener('click', function () {
-            window.location.href = 'blog/3-breaking-military-grade-encryption-to-animate-my-name/';
+            window.location.href = 'weblog/3-breaking-military-grade-encryption/';
         });
 
         // Animate Padding oracle
@@ -159,11 +161,19 @@
                 // Banner Title
                 diagramElements["T"] = document.getElementById("banner-title")
 
-                // Can be any string with < 15 utf-8 encoded bytes
-                let encryptor = new MilitaryGradeEncryptor("Pascal Schärli");
+                function showAnimation(){
+                    // Can be any string with < 15 utf-8 encoded bytes
+                    let encryptor = new MilitaryGradeEncryptor("Pascal Schärli");
 
-                encryptor.getEncryptedSecret().then((ciphertext) => {
-                    decryptBlockWithPaddingOracle(ciphertext, encryptor, diagramElements, 100);
+                    encryptor.getEncryptedSecret().then((ciphertext) => {
+                        decryptBlockWithPaddingOracle(ciphertext, encryptor, diagramElements, 100);
+                    });
+                }
+
+                showAnimation();
+
+                document.getElementById('replay-circle').addEventListener('click', function () {
+                    showAnimation();
                 });
 
             }

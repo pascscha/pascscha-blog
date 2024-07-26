@@ -126,9 +126,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 link.setAttribute('rel', 'noopener noreferrer');
             }
 
-            // Calculate read time
+            // Calculate read time (I presume a read time of fairly slow 150 words per minute,
+            // due to the the technical nature and diagrams throughout my posts)
             const wordCount = markdown.trim().split(/\s+/).length;
-            const readTimeMinutes = Math.ceil(wordCount / 200);
+            const readTimeMinutes = Math.ceil(wordCount / 150);
             readTimeSpan.textContent = `${readTimeMinutes} min read`;
 
             // Generate table of contents

@@ -131,10 +131,10 @@ nav {
 }
 
 /* Info circle and tooltip */
-#info-circle {
+#info-circle,
+#replay-circle {
   position: absolute;
   bottom: 20px;
-  right: 20px;
   width: 30px;
   height: 30px;
   background-color: #808080;
@@ -143,14 +143,21 @@ nav {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  font-weight: bold;
   color: #ffffff;
 }
 
-#info-tooltip {
+#info-circle {
+  right: 20px;
+}
+
+#replay-circle {
+  right: 60px; /* Positioned to the left of the info circle */
+}
+
+#info-tooltip,
+#replay-tooltip {
   position: absolute;
   bottom: 60px;
-  right: 20px;
   background-color: var(--solarized-base2);
   color: var(--solarized-base01);
   padding: 10px;
@@ -159,7 +166,16 @@ nav {
   display: none;
 }
 
-#info-circle:hover #info-tooltip {
+#info-tooltip {
+  right: 20px;
+}
+
+#replay-tooltip {
+  right: 60px;
+}
+
+#info-circle:hover #info-tooltip,
+#replay-circle:hover #replay-tooltip {
   display: block;
 }
 
@@ -501,6 +517,7 @@ footer {
 
   #content {
     padding: 1rem;
+    max-width: 80%;
   }
 
   #about-me {
@@ -618,13 +635,22 @@ footer {
   }
 }
 
+@media (max-width: 1100px) {
+  #content {
+    max-width: 80%;
+  }
+  #sidebar {
+    width: auto;
+  }
+}
+
 @media (max-width: 768px) {
   #content-wrapper {
     flex-direction: column;
   }
 
   #sidebar {
-    width: 100%;
+    width: auto;
     height: auto;
     position: static;
     border-right: none;
@@ -632,6 +658,6 @@ footer {
   }
 
   #content {
-    max-width: 100%;
+    max-width: 80%;
   }
 }

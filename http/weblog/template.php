@@ -66,8 +66,8 @@ echo "<meta property=\"og:description\" content=\"{$description}\">\n";
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <title>
         <?php echo $title; ?>
     </title>
@@ -120,8 +120,8 @@ echo "<meta property=\"og:description\" content=\"{$description}\">\n";
             <div id="post-info"><span id="post-date">
                     <?php echo date('Y-m-d', $timestamp); ?>
                 </span><span id="read-time"></span></div>
-            <div id="rendered-content"><noscript>It's okay if you prefer not to enable JavaScript. You can find a view
-                    this post in markdown at<a href="index.md">index.md</a>.</noscript></div>
+            <div id="rendered-content"><p>It's okay if you prefer not to enable JavaScript. You can find a view
+                    this post in markdown at<a href="index.md">index.md</a>.</p></div>
             <div id="post-navigation">
                 <a id="prev-post" class="nav-link" href="<?php echo $previous_link; ?>">
                     <?php echo $previous_title; ?>
@@ -163,6 +163,6 @@ echo "<meta property=\"og:description\" content=\"{$description}\">\n";
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"
     integrity="sha512-6yoqbrcLAHDWAdQmiRlHG4+m0g/CT/V9AGyxabG8j7Jk8j3r3K6due7oqpiRMZqcYe9WM2gPcaNNxnl2ux+3tA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="/js/blog/blog.js"></script>
+<script src="/js/weblog/blog.js"></script>
 
 </html>
